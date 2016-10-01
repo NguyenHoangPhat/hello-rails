@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 	def index
-		@post = Post.all.order('created_at DESC')
+		@posts = Post.all.order('created_at DESC')
 	end
 
 
@@ -14,30 +14,36 @@ class PostsController < ApplicationController
 	end
 
 
-	def edit
-		@post = Post.find(params[:id])
-	end
-
-
-
 	def create
 		@post = Post.new(post_params)
 		if @post.save
-			redirect_to @post
+			redirect_to root_path
 		else
     		render 'new'
 		end
 	end
 
 
+	def edit
+		@post = Post.find(params[:id])
+	end
+	
+
 	def update
-		@post = Post.new(post_params)
+		@post = Post.find(params[:id])
 		if @post.update(post_params)
-			redirect_to @post
+			redirect_to posts_path
 		else
     		render 'edit'
 		end
 	end
+
+	def destroy
+		@post = Post.find(params[:id])
+		post.destroy(post_params)
+		redirect_to posts_path
+	end
+
 
 
 	private

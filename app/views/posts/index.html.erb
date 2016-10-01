@@ -1,11 +1,13 @@
-<h1>Welcome to blog</h1>
+<h1>Welcome to blog</h1> 
 
-<%= link_to('Create New Blog', controller: 'posts',
-        action: 'new', message: 'Welcome!') %>
-<%-# <a href = "/posts/new"> Create New Blog </a> -%>
-<% @post.each do |post|%>
-  <div class = "post_wrapper">
-    <h2 class="title"><%= link_to post.title,post %></h2>
-    <p class="date"><%= post.created_at.strftime("%p: %B, %d, %Y") %></p>
-  </div>
-<% end %>
+<% @posts.each do |post| %>
+  <h2><%= link_to post.title, post %></h2>
+  <p><%= post.body %></p>
+  <p>
+    <%= link_to "Edit", edit_post_path(post) %>
+    <%= link_to "Delete", post_path(post), :confirm => "Are you sure!?", :method => :delete %>
+  </p>
+  <hr />
+  <% end %>
+
+<p><%= link_to "Add a New Post", new_post_path %></p>
