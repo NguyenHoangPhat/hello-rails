@@ -3,7 +3,7 @@
 </h1>
 
 <p class = "body">
-	<%= @post.body %>
+	<%= markdown(@post.body).to_html %>
 </p>
 
 <small><p class = "date">

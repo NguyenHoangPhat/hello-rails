@@ -1,5 +1,5 @@
 <h1>Welcome to blog</h1> 
-<a class = "btn btn-primary" href ="#"> Test </a>
+
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, post %></h2>
   <p><%= post.body %></p>
@@ -10,6 +10,6 @@
               data: { confirm: 'Are you sure?' } %>
   </p>
   <hr />
-  <% end %>
-
+<% end %>
 <p><%= link_to "Add a New Post", new_post_path %></p>
+
