@@ -13,8 +13,8 @@ Danh sách chức năng **bắt buộc**:
 * [x] Người dùng có thể tạo bài blog mới.
 * [x] Người dùng có thể cập nhật lại nội dung bài blog.
 * [x] Người dùng có thể thêm comment vào các bài đăng.
-* [ ] Sử dụng bootstrap để tạo layout cho trang web. Sử dụng [Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0.alpha3).
-* [ ] Bài đăng sẽ được format bằng markdown. Sử dụng [RedCarpet gem](https://github.com/vmg/redcarpet).
+* [x] X. Sử dụng bootstrap để tạo layout cho trang web. Sử dụng [Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0.alpha3).
+* [x] X. Bài đăng sẽ được format bằng markdown. Sử dụng [RedCarpet gem](https://github.com/vmg/redcarpet).
 
 Danh sách chức năng **phụ**:
 
@@ -54,6 +54,14 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+-   Cài rails trên windows bị gặp lỗi.
+-   Bootstrap cũng thêm các gem trong Gemfile, vẫn không chạy được bootstrap, mặc dù không có lỗi gì, và cũng làm theo hướng dẫn
+-   Redcarpet cũng tương tự như vậy, cũng không chạy được, em cũng không biết lý do tại sao
+-   Đó là những khó khăn của em trong bài tập này. 
+         
+
+    Note:  Em đánh dấu check vào 2 ô Bootstrap và Redcarpet là vì em hiểu cách làm trên từng cái, nhưng e không biết do win
+            của em có bị gì hay không mà làm theo hướng dẫn vẫn không làm được. Chứ không phải là gian lận gì, em mong Thầy thông cảm.
 
 ## License
 
